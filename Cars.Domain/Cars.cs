@@ -25,7 +25,7 @@ namespace Cars.Domain
         public Guid Id { get; set; }
         public string Brand { get; set; } = string.Empty;
         public string Model { get; set; } = string.Empty;
-        public int DoorsNmuber { get; set; }
+        public int DoorsNumber { get; set; }
         public int LuggageCapacity  { get; set; }
         public int EngineCapacity   { get; set; }
 

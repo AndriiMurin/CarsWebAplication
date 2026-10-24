@@ -33,7 +33,7 @@ namespace Cars.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("DoorsNmuber")
+                    b.Property<int>("DoorsNumber")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("EngineCapacity")

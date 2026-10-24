@@ -15,7 +15,7 @@ public static class Seed
             {
                 Brand = "Mazda",
                 Model = "CX-60",
-                DoorsNmuber = 5,
+                DoorsNumber = 5,
                 LuggageCapacity= 570,
                 EngineCapacity = 2488,
                 FuelType = FuelType.Hybrid,
@@ -27,7 +27,7 @@ public static class Seed
             {
                 Brand = "Renault",
                 Model = "Clio",
-                DoorsNmuber = 5,
+                DoorsNumber = 5,
                 LuggageCapacity = 391,
                 EngineCapacity = 999,
                 FuelType = FuelType.Petrol,
@@ -39,7 +39,7 @@ public static class Seed
             {
                 Brand = "Toyota",
                 Model = "Corolla",
-                DoorsNmuber = 4,
+                DoorsNumber = 4,
                 LuggageCapacity = 471,
                 EngineCapacity = 1798,
                 FuelType = FuelType.Hybrid,
