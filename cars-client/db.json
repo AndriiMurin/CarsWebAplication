@@ -1,0 +1,65 @@
+{
+  "cars": [
+    {
+      "id": "2",
+      "brand": "Skoda",
+      "model": "Octavia",
+      "doorsNumber": 5,
+      "luggageCapacity": 600,
+      "engineCapacity": 1500,
+      "fuelType": 1,
+      "productionDate": "2021-03-15",
+      "averageFuelConsumption": 6.8,
+      "bodyType": 1
+    },
+    {
+      "brand": "Audi",
+      "model": "Q7",
+      "doorsNumber": 5,
+      "luggageCapacity": 670,
+      "engineCapacity": 2984,
+      "fuelType": 2,
+      "productionDate": "2017-10-11",
+      "averageFuelConsumption": 11,
+      "bodyType": 3,
+      "id": "N0xvu-OkRK8"
+    },
+    {
+      "brand": "Audi",
+      "model": "A7 Sportback 45 TFSI",
+      "doorsNumber": 5,
+      "luggageCapacity": 535,
+      "engineCapacity": 1984,
+      "fuelType": 1,
+      "productionDate": "2021-06-15",
+      "averageFuelConsumption": 7.1,
+      "bodyType": 2,
+      "id": "AbWHnFX3jyQ"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E 220 d",
+      "doorsNumber": 4,
+      "luggageCapacity": 540,
+      "engineCapacity": 1950,
+      "fuelType": 2,
+      "productionDate": "2020-09-20",
+      "averageFuelConsumption": 5.2,
+      "bodyType": 1,
+      "id": "xJpOEmQTNz4"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Santa Fe 2.2 CRDi",
+      "doorsNumber": 5,
+      "luggageCapacity": 634,
+      "engineCapacity": 2151,
+      "fuelType": 2,
+      "productionDate": "2021-04-12",
+      "averageFuelConsumption": 6.5,
+      "bodyType": 3,
+      "id": "0V7IsbBjURM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
