@@ -193,3 +193,54 @@ form button {
   background-color: #9a465f;
   color: #ffffff;
 }
+
+/* Search and favorites filter */
+.cars-toolbar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cars-toolbar input[type='search'] {
+  min-width: 280px;
+  padding: 9px;
+  font: inherit;
+  border: 1px solid #c9b5ac;
+  border-radius: 6px;
+}
+
+/* Favorites checkbox */
+.favorite-filter {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+/* Favorites buttons */
+.favorite-button {
+  background-color: #7b3549;
+  color: white;
+}
+
+.favorite-button.active-favorite {
+  background-color: #9a765f;
+  color: white;
+}
+
+.favorite-button:hover {
+  background-color: #612638;
+}
+
+.favorite-button.active-favorite:hover {
+  background-color: #80604d;
+}
+
+/* Favorites counter in navigation */
+.favorite-counter {
+  margin-left: auto;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 600;
+}
