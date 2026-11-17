@@ -5,6 +5,7 @@ import type { Car } from "../models/Car";
 import { getCars, deleteCar } from "../services/carService";
 import { useCarUiStore } from "../store/useCarUiStore";
 import CarCard from "../components/CarCard";
+import { useAuthStore } from "../store/useAuthStore";
 
 export default function CarsPage() {
   const [cars, setCars] = useState<Car[]>([]);
@@ -24,7 +25,13 @@ export default function CarsPage() {
     (state) => state.setShowFavoritesOnly,
   );
 
-  const favoriteCarIds = useCarUiStore((state) => state.favoriteCarIds);
+  const user = useAuthStore((state) => state.user);
+
+  const favoriteCarIdsByUser = useCarUiStore(
+    (state) => state.favoriteCarIdsByUser,
+  );
+
+  const favoriteCarIds = user ? (favoriteCarIdsByUser[user.id] ?? []) : [];
   const removeFavorite = useCarUiStore((state) => state.removeFavorite);
 
   // Pobieranie samochodów z backendu
@@ -72,7 +79,9 @@ export default function CarsPage() {
 
       await deleteCar(id);
 
-      removeFavorite(id);
+      if (user) {
+        removeFavorite(user.id, id);
+      }
 
       setCars((prevCars) => prevCars.filter((car) => car.id !== id));
     } catch {
