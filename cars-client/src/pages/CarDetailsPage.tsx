@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 import type { Car } from "../models/Car";
 import { getCarById } from "../services/carService";
 import { useCarUiStore } from "../store/useCarUiStore";
+import { useAuthStore } from "../store/useAuthStore";
 
 export default function CarDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -11,7 +12,12 @@ export default function CarDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const favoriteCarIds = useCarUiStore((state) => state.favoriteCarIds);
+  const user = useAuthStore((state) => state.user);
+  const favoriteCarIdsByUser = useCarUiStore(
+    (state) => state.favoriteCarIdsByUser,
+  );
+  const favoriteCarIds = user ? (favoriteCarIdsByUser[user.id] ?? []) : [];
+
   const toggleFavorite = useCarUiStore((state) => state.toggleFavorite);
 
   useEffect(() => {
@@ -73,7 +79,11 @@ export default function CarDetailsPage() {
         className={
           isFavorite ? "favorite-button active-favorite" : "favorite-button"
         }
-        onClick={() => toggleFavorite(car.id)}
+        onClick={() => {
+          if (user) {
+            toggleFavorite(user.id, car.id);
+          }
+        }}
       >
         {isFavorite ? "Ulubiony" : "Ulubione"}
       </button>
